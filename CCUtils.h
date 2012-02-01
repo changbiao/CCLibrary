@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define CCLocalized( X ) (NSLocalizedString(X, nil))
+#define CCLocalized( X ) (NSLocalizedString(@X, nil))
 
 @interface CCUtils : NSObject
 
