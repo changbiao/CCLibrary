@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7D1D8F9514D9F7B200EC82BA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D1D8F9414D9F7B200EC82BA /* Cocoa.framework */; };
-		7D1D8F9F14D9F7B200EC82BA /* CCLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1D8F9E14D9F7B200EC82BA /* CCLibrary.m */; };
+		7D1D8FA914D9F8C500EC82BA /* CCUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D1D8FA714D9F8C500EC82BA /* CCUtils.h */; };
+		7D1D8FAA14D9F8C500EC82BA /* CCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1D8FA814D9F8C500EC82BA /* CCUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,9 +18,9 @@
 		7D1D8F9714D9F7B200EC82BA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		7D1D8F9814D9F7B200EC82BA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7D1D8F9914D9F7B200EC82BA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		7D1D8F9C14D9F7B200EC82BA /* CCLibrary-Prefix.pch */ = {isa = PBXFileReference; path = "CCLibrary-Prefix.pch"; sourceTree = "<group>"; };
-		7D1D8F9D14D9F7B200EC82BA /* CCLibrary.h */ = {isa = PBXFileReference; path = CCLibrary.h; sourceTree = "<group>"; };
-		7D1D8F9E14D9F7B200EC82BA /* CCLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCLibrary.m; sourceTree = "<group>"; };
+		7D1D8F9C14D9F7B200EC82BA /* CCLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCLibrary-Prefix.pch"; sourceTree = "<group>"; };
+		7D1D8FA714D9F8C500EC82BA /* CCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCUtils.h; sourceTree = "<group>"; };
+		7D1D8FA814D9F8C500EC82BA /* CCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +74,7 @@
 		7D1D8F9A14D9F7B200EC82BA /* CCLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				7D1D8F9D14D9F7B200EC82BA /* CCLibrary.h */,
-				7D1D8F9E14D9F7B200EC82BA /* CCLibrary.m */,
+				7D1D8FA614D9F89900EC82BA /* Classes */,
 				7D1D8F9B14D9F7B200EC82BA /* Supporting Files */,
 			);
 			path = CCLibrary;
@@ -88,6 +88,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7D1D8FA614D9F89900EC82BA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7D1D8FA714D9F8C500EC82BA /* CCUtils.h */,
+				7D1D8FA814D9F8C500EC82BA /* CCUtils.m */,
+			);
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -95,6 +104,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D1D8FA914D9F8C500EC82BA /* CCUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D1D8F9F14D9F7B200EC82BA /* CCLibrary.m in Sources */,
+				7D1D8FAA14D9F8C500EC82BA /* CCUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
