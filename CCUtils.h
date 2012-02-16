@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define CCLocalized( X ) (NSLocalizedStringFromTableInBundle(@X, nil, [NSBundle bundleForClass:[self class]], nil))
+#define CCLocalized( X ) (NSLocalizedStringFromTableInBundle(X, nil, [NSBundle bundleForClass:[self class]], nil))
 
 @interface CCUtils : NSObject
 
