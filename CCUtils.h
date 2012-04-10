@@ -12,7 +12,9 @@
 
 @interface CCUtils : NSObject
 
+#ifdef __PLATFORM_IOS
 +(CGSize)screenSize:(UIInterfaceOrientation)interfaceOrientation;
+#endif
 
 +(void)setAssociatedObject:(id)objectA forObject:(id)objectB;
 +(id)associatedObjectFor:(id)object;

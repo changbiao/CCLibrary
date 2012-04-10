@@ -13,24 +13,26 @@ static NSString *foo = @"foo";
 
 @implementation CCUtils
 
+#ifdef __PLATFORM_IOS
 +(CGSize)screenSize:(UIInterfaceOrientation)interfaceOrientation
 {
-switch (interfaceOrientation) {
-	case UIInterfaceOrientationPortrait:
-	case UIInterfaceOrientationPortraitUpsideDown:
-		return CGSizeMake(320, 460);
-		break;
-		
-	case UIInterfaceOrientationLandscapeLeft:
-	case UIInterfaceOrientationLandscapeRight:
-		return CGSizeMake(480, 300);
-		break;
-		
-	default:
-		return CGSizeMake(0, 0);
-		break;
+	switch (interfaceOrientation) {
+		case UIInterfaceOrientationPortrait:
+		case UIInterfaceOrientationPortraitUpsideDown:
+			return CGSizeMake(320, 460);
+			break;
+			
+		case UIInterfaceOrientationLandscapeLeft:
+		case UIInterfaceOrientationLandscapeRight:
+			return CGSizeMake(480, 300);
+			break;
+			
+		default:
+			return CGSizeMake(0, 0);
+			break;
+	}
 }
-}
+#endif
 
 +(void)setAssociatedObject:(id)objectA forObject:(id)objectB
 {
