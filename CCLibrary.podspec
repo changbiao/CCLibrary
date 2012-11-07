@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.summary      = "CCLibrary is a little library for great macros and helpful tools."
   s.homepage     = "http://github.com/ChaosCoder/CCLibrary.git"
 
-  s.license      = 'BSD'
+  s.license      = 'MIT'
   s.author       = { "Andreas Ganske" => "a.ganske@chaosspace.de" }
   s.source       = { :git => "https://github.com/ChaosCoder/CCLibrary.git", :tag => "0.1.0" }
 
