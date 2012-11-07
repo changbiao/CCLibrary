@@ -10,11 +10,11 @@ Pod::Spec.new do |s|
   s.name         = "CCLibrary"
   s.version      = "0.1.0"
   s.summary      = "A short description of CCLibrary."
-  s.homepage     = "http://gitlab.chaosspace.de/CCLibrary"
+  s.homepage     = "http://github.com/ChaosCoder/CCLibrary.git"
 
   s.license      = 'MIT (example)'
   s.author       = { "Andreas Ganske" => "a.ganske@chaosspace.de" }
-  s.source       = { :git => "http://gitlab.chaosspace.de/cclibrary.git", :tag => "0.1.0" }
+  s.source       = { :git => "http://github.com/ChaosCoder/CCLibrary.git", :tag => "0.1.0" }
 
   s.platform     = :ios
   s.source_files = '*.{h,m}'
