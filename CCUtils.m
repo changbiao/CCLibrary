@@ -44,4 +44,29 @@ static NSString *foo = @"foo";
 	return objc_getAssociatedObject(object, &foo);
 }
 
++(NSString *)documentsPath
+{
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	return [paths objectAtIndex:0];
+}
+
++(NSString *)cachePath
+{
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+	return [paths objectAtIndex:0];
+}
+
++(NSString *)libraryPath
+{
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+	return [paths objectAtIndex:0];
+}
+
++(void)createDirectoriesForFilePath:(NSString *)filePath error:(NSError **)error
+{
+	bool isDirectory;
+
+	if (![[NSFileManager defaultManager] fileExistsAtPath:filePath isDirectory:&isDirectory] || !isDirectory)
+		[[NSFileManager defaultManager] createDirectoryAtPath:[filePath stringByDeletingLastPathComponent] withIntermediateDirectories:YES attributes:nil error:error];
+}
 @end
