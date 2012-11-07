@@ -18,5 +18,11 @@
 
 +(void)setAssociatedObject:(id)objectA forObject:(id)objectB;
 +(id)associatedObjectFor:(id)object;
++(NSString *)documentsPath;
++(NSString *)cachePath;
++(NSString *)libraryPath;
+
+
++(void)createDirectoriesForFilePath:(NSString *)filePath error:(NSError **)error;
 
 @end
