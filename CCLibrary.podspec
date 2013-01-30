@@ -8,16 +8,15 @@
 #
 Pod::Spec.new do |s|
   s.name         = "CCLibrary"
-  s.version      = "0.1.4"
+  s.version      = "0.1.5"
   s.summary      = "CCLibrary is a little library for great macros and helpful tools."
   s.homepage     = "http://github.com/ChaosCoder/CCLibrary.git"
 
   s.license      = 'MIT'
   s.author       = { "Andreas Ganske" => "a.ganske@chaosspace.de" }
-  s.source       = { :git => "https://github.com/ChaosCoder/CCLibrary.git", :tag => "0.1.4" }
+  s.source       = { :git => "https://github.com/ChaosCoder/CCLibrary.git", :tag => "0.1.5" }
 
   s.platform     = :ios
   s.source_files = '*.{h,m}'
-  s.framework  = 'Cocoa'
   s.requires_arc = true
 end
