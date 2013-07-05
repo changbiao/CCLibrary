@@ -8,7 +8,7 @@
 #
 Pod::Spec.new do |s|
   s.name         = "CCLibrary"
-  s.version      = "0.1.5"
+  s.version      = "0.1.6"
   s.summary      = "CCLibrary is a little library for great macros and helpful tools."
   s.homepage     = "http://github.com/ChaosCoder/CCLibrary.git"
 

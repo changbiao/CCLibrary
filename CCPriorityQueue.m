@@ -7,37 +7,6 @@
 
 #import "CCPriorityQueue.h"
 
-@interface CCPriorityObject()
-
-@property (nonatomic, retain) id object;
-@property (nonatomic, assign) NSInteger priority;
-
-@end
-
-@implementation CCPriorityObject
-
-+(id)objectWithObject:(id)anObject priority:(NSInteger)aPriority
-{
-	return [[self alloc] initWithObject:anObject priority:aPriority];
-}
-
--(id)initWithObject:(id)anObject priority:(NSInteger)aPriority
-{
-	if ((self = [super init]))
-	{
-		self.object = anObject;
-		self.priority = aPriority;
-	}
-	return self;
-}
-
--(void)dealloc
-{
-	self.object = nil;
-}
-
-@end
-
 @interface CCPriorityQueue()
 
 @property (nonatomic, strong) NSMutableArray *queue;
@@ -61,16 +30,11 @@
 	return self;
 }
 
--(void)addObject:(id)object priority:(NSInteger)priority
-{
-	[self addObject:[CCPriorityObject objectWithObject:object priority:priority]];
-}
-
--(void)addObject:(CCPriorityObject *)object
+-(void)addObject:(id<CCPriorityObject>)object
 {
 	for (NSInteger i = 0; i < [self.queue count]; i++)
 	{
-		CCPriorityObject *currentObject = [self.queue objectAtIndex:i];
+		id<CCPriorityObject> currentObject = [self.queue objectAtIndex:i];
 		if ([currentObject priority] >= [object priority])
 		{
 			[self.queue insertObject:object atIndex:i];
@@ -84,7 +48,7 @@
 -(id)peekObject
 {
 	if (![self isEmpty])
-		return [[self.queue objectAtIndex:0] object];
+		return [self.queue objectAtIndex:0];
 
 	return nil;
 }
@@ -93,7 +57,7 @@
 {
 	if (![self isEmpty])
 	{
-		id object = [[self.queue objectAtIndex:0] object];
+		id object = [self.queue objectAtIndex:0];
 		[self.queue removeObjectAtIndex:0];
 		return object;
 	}
@@ -101,7 +65,7 @@
 	return nil;
 }
 
--(NSInteger)count
+-(NSUInteger)count
 {
 	return [self.queue count];
 }

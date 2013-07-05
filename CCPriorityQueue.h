@@ -5,10 +5,9 @@
 //  Copyright 2011 Andreas Ganske. All rights reserved.
 //
 
-@interface CCPriorityObject : NSObject
+@protocol CCPriorityObject
 
-+(id)objectWithObject:(id)anObject priority:(NSInteger)aPriority;
--(id)initWithObject:(id)anObject priority:(NSInteger)aPriority;
+-(NSUInteger)priority;
 
 @end
 
@@ -16,11 +15,11 @@
 
 +(id)queue;
 
--(void)addObject:(id)object priority:(NSInteger)priority;
+-(void)addObject:(id<CCPriorityObject>)object;
 -(id)peekObject;
 -(id)pollObject;
 
--(NSInteger)count;
+-(NSUInteger)count;
 -(BOOL)isEmpty;
 
 @end
